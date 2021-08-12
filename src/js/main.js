@@ -1,2 +1,2 @@
 import "../css/style.scss"
-alert('What')
+alert('Hello')
