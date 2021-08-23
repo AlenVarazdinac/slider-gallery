@@ -1,11 +1,13 @@
 .slider {
   display: flex;
+  margin: 0 auto;
+  width: 80%;
   &__wrapper {
     position: relative;
     width: fit-content;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    margin-right: 25px;
     &__image {
       width: auto;
       height: 200px;
@@ -22,7 +24,7 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        right: 100px;
+        right: 0;
         top: 0;
         & img {
           border: 1px solid blue;
