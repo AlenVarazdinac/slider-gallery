@@ -1,4 +1,6 @@
 function previousSlide() {
+  $('#prevSlideControl').prop('disabled', true)
+
   // Get first image from top row and its width
   const topRowFirstImage = $('.slider__wrapper--top').find('img:first')
   const topRowFirstImageWidth = topRowFirstImage.width()
@@ -29,12 +31,15 @@ function previousSlide() {
       complete: () => {
         $('.slider__wrapper--bottom').append(bottomRowFirstImage)
         $('.slider__wrapper--bottom').css({ marginLeft: 0 })
+        $('#prevSlideControl').prop('disabled', false)
       }
     }
   )
 }
 
 function nextSlide() {
+  $('#nextSlideControl').prop('disabled', true)
+
   // Get last image from top row and its width
   const topRowLastImage = $('.slider__wrapper--top').find('img:last')
   const topRowLastImageWidth = topRowLastImage.width()
@@ -65,6 +70,7 @@ function nextSlide() {
       complete: () => {
         $('.slider__wrapper--bottom').prepend(bottomRowLastImage)
         $('.slider__wrapper--bottom').css({ marginLeft: 0 })
+        $('#nextSlideControl').prop('disabled', false)
       }
     }
   )

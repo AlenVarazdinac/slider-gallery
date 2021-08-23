@@ -29,15 +29,27 @@
         flex-direction: column;
         right: 0;
         top: 0;
-        & img {
-          border: 1px solid blue;
+        &--left-arrow,
+        &--right-arrow {
+          border: 1px solid #dddddd;
           padding: 15px;
           border-radius: 10px;
           cursor: pointer;
           background-color: #ffffff;
           transition: 0.3s;
+          &--active-state {
+            display: none;
+          }
           &:hover {
-            background-color: darkgray;
+            border: 1px solid #134880;
+          }
+          &:hover & {
+            &--disabled-state {
+              display: none;
+            }
+            &--active-state {
+              display: inline;
+            }
           }
           &:not(:last-child) {
             margin-bottom: 5px;
