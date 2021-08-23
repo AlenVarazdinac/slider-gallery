@@ -1,4 +1,5 @@
 .slider {
+  display: flex;
   &__wrapper {
     position: relative;
     width: fit-content;
@@ -16,12 +17,13 @@
     &--top,
     &--bottom {
       display: inline-block;
-
+      position: relative;
       &--controls {
         position: absolute;
         display: flex;
         flex-direction: column;
         right: 100px;
+        top: 0;
         & img {
           border: 1px solid blue;
           padding: 15px;
@@ -44,8 +46,8 @@
     .image-position-bottom:not(:last-child) {
       margin-right: 10px;
     }
-  }
-  &--text {
-    width: 20%;
+    &--text {
+      width: 20%;
+    }
   }
 }
