@@ -1,3 +1,6 @@
+$primaryColor: #134880;
+$disabledColor: #dddddd;
+
 .slider {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -31,7 +34,7 @@
         top: 0;
         &--left-arrow,
         &--right-arrow {
-          border: 1px solid #dddddd;
+          border: 1px solid $disabledColor;
           padding: 15px;
           border-radius: 10px;
           cursor: pointer;
@@ -41,7 +44,7 @@
             display: none;
           }
           &:hover {
-            border: 1px solid #134880;
+            border: 1px solid $primaryColor;
           }
           &:hover & {
             &--disabled-state {
@@ -65,6 +68,16 @@
     }
     &--text {
       width: 100%;
+      & h2 {
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 57px;
+        color: $primaryColor;
+      }
+      & p {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
   }
 }
