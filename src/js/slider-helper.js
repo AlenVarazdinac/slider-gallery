@@ -12,7 +12,7 @@ function previousSlide() {
   $('.slider__wrapper--top').animate(
     { marginLeft: -topRowFirstImageWidth },
     {
-      duration: 1000,
+      duration: 500,
       queue: false,
       complete: () => {
         $('.slider__wrapper--top').append(topRowFirstImage)
@@ -24,7 +24,7 @@ function previousSlide() {
   $('.slider__wrapper--bottom').animate(
     { marginLeft: -bottomRowFirstImageWidth },
     {
-      duration: 1000,
+      duration: 500,
       queue: false,
       complete: () => {
         $('.slider__wrapper--bottom').append(bottomRowFirstImage)
@@ -48,7 +48,7 @@ function nextSlide() {
   $('.slider__wrapper--top').animate(
     { marginLeft: +topRowLastImageWidth },
     {
-      duration: 1000,
+      duration: 500,
       queue: false,
       complete: () => {
         $('.slider__wrapper--top').prepend(topRowLastImage)
@@ -60,7 +60,7 @@ function nextSlide() {
   $('.slider__wrapper--bottom').animate(
     { marginLeft: +bottomRowLastImageWidth },
     {
-      duration: 1000,
+      duration: 500,
       queue: false,
       complete: () => {
         $('.slider__wrapper--bottom').prepend(bottomRowLastImage)

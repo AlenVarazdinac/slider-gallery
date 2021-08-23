@@ -1,13 +1,15 @@
 .slider {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
   margin: 0 auto;
   width: 80%;
   &__wrapper {
     position: relative;
-    width: fit-content;
     display: flex;
     flex-direction: column;
     margin-right: 25px;
+    overflow-x: hidden;
     &__image {
       width: auto;
       height: 200px;
@@ -20,6 +22,7 @@
     &--bottom {
       display: inline-block;
       position: relative;
+      width: max-content;
       &--controls {
         position: absolute;
         display: flex;
@@ -49,7 +52,11 @@
       margin-right: 10px;
     }
     &--text {
-      width: 20%;
+      width: 100%;
     }
   }
+}
+
+.slider-bottom-wrapper {
+  position: relative;
 }
